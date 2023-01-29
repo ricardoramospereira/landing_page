@@ -12,5 +12,9 @@ class Teams(models.Model):
     linkedin_link = models.URLField('Lindedin', max_length=100)
     create_date = models.DateTimeField('Data de Criação', auto_now_add=True)
 
+    class Meta: 
+        verbose_name = "Team"
+        verbose_name_plural = "Teams"
+
     def __str__(self) -> str:
         return self.first_name
