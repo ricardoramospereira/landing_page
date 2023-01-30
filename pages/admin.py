@@ -1,9 +1,14 @@
 from django.contrib import admin
-from .models import Teams
+from .models import Teams, Servico
 
 # Register your models here.
-#@admin.site.register(Team)
 class TeamAdmin(admin.ModelAdmin):
     list_display = ("first_name","last_name", "designation",)
 
-admin.site.register(Teams)
+
+class ServicoAdmin(admin.ModelAdmin):
+    list_display = ("name", "descriptions",)
+
+
+admin.site.register(Teams, TeamAdmin)
+admin.site.register(Servico, ServicoAdmin)

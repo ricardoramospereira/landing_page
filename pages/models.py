@@ -18,3 +18,26 @@ class Teams(models.Model):
 
     def __str__(self) -> str:
         return self.first_name
+
+class Servico(models.Model):
+    name = models.CharField("Serviço", max_length=100)
+    descriptions = models.CharField("descrição", max_length=200)
+
+    class Meta:
+        verbose_name = "Serviço"
+        verbose_name_plural = "Serviços"
+
+    def __str__(self) -> str:
+        return self.name
+
+'''class Servico(models.Model):
+    name_servico = models.CharField("Serviços", max_length=100)
+    descriptions = models.TextField("Descrição", max_length=255)
+
+    class Meta:
+        verbose_name = "Serviço"
+        verbose_name_plural = "Serviços"
+
+    def __str__(self) -> str:
+        return self.name_servico'''
+
