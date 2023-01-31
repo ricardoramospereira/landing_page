@@ -30,6 +30,20 @@ class Servico(models.Model):
     def __str__(self) -> str:
         return self.name
 
+
+class Plano(models.Model):
+    pacote = models.CharField('Plano', max_length=100)
+    preco = models.IntegerField("Preço", default=0)
+
+    class Meta:
+        verbose_name = "plano"
+        verbose_name_plural = "planos"
+
+
+    def __str__(self) -> str:
+        return self.pacote
+        # (...)
+
 '''class Servico(models.Model):
     name_servico = models.CharField("Serviços", max_length=100)
     descriptions = models.TextField("Descrição", max_length=255)

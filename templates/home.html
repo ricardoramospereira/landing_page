@@ -480,11 +480,12 @@
         </div>
 
         <div class="row">
+          {% for planos in plano %}
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
-              <h3>Plano Free</h3>
-              <h4><sup>R$</sup>0<span>por mês</span></h4>
+              <h3>{{ planos.pacote }}</h3>
+              <h4><sup>R$</sup>{{ planos.preco }}<span>por mês</span></h4>
               <ul>
                 <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
                 <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
@@ -495,36 +496,7 @@
               <a href="#" class="buy-btn">Vamos Começar</a>
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
-              <h3>Plano Negócios</h3>
-              <h4><sup>R$</sup>29<span>por mês</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="buy-btn">Vamos Começar</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <h3>Plano Desenvolvedor</h3>
-              <h4><sup>R$</sup>49<span>por mês</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="buy-btn">Vamos Começar</a>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
 
